@@ -1,0 +1,60 @@
+/* styledog.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* Light text color */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+h1 {
+    color: #ff9933; /* Orange color for the title */
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    z-index: 1; /* Ensure the title is above other elements */
+}
+
+button {
+    background-color: #4a90e2; /* Blue color for the button */
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    margin-top: 70px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: absolute;
+    top: 20px;
+    z-index: 1; /* Ensure the button is above other elements */
+}
+
+button:hover {
+    background-color: #4169e1; /* Darker blue on hover */
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#result {
+    max-width: 80%; /* Adjusted maximum width for the image */
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    border-radius: 12px;
+    margin-top: 180px; /* Adjusted margin for the image */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 0; /* Ensure the image is below other elements */
+    box-shadow: 0 0 80px rgb(255, 125, 50);
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #4a90e2;
+    }
+    100% {
+        box-shadow: 0 0 20px #4a90e2, 0 0 30px #4169e1;
+    }
+}
